@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+input {
+  border: 0;
+  outline: 0;
+}
+
+.container {
+  background-color: #251b37;
+  width: 100%;
+  height: 1000px;
+}
+
+.title {
+  color: #ffcaca;
+  padding: 20px;
+}
+
+.transitions__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: 0 auto;
+  background-color: #ffcaca;
+  height: 600px;
+  width: 50%;
+  border-radius: 5px;
+  box-shadow: -5px 3px 7px 2px rgba(255, 202, 202, 0.6);
+  padding: 20px;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.card {
+  background-color: #564966;
+  border-radius: 5px;
+  box-shadow: -6px 5px 5px -1px rgba(0, 0, 0, 0.41);
+  display: grid;
+  padding: 20px;
+}
+
+.card__title {
+  color: white;
+  font-size: 18px;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: #ffcaca;
+  border-radius: 5px;
+  place-self: center;
+  cursor: pointer;
+}
+
+.hover__background {
+  transition-property: background-color, transform;
+  transition-duration: 1000ms;
+  transition-timing-function: ease;
+  transition-delay: 0ms;
+}
+
+.hover__background:hover {
+  background-color: lightblue;
+  transform: scale(2);
+}
+
+.active__transformy {
+  transition-property: transform;
+  transition-duration: 1000ms;
+  transition-timing-function: ease-in;
+  transition-delay: 0ms;
+}
+
+.active__transformy:active {
+  transform: scaleY(2);
+}
+
+.hover__rote {
+  transition-property: transform;
+  transition-duration: 1000ms;
+  transition-timing-function: ease;
+  transition-delay: 0ms;
+}
+
+.hover__rote:hover {
+  transform: rotate(180deg);
+}
+
+.active__translate {
+  transition-property: transform;
+  transition-duration: 1000ms;
+  transition-timing-function: ease;
+  transition-delay: 0ms;
+}
+
+.active__translate:active {
+  transform: translateX(20px);
+}
+
+.opacity {
+  opacity: 0;
+  transition: transform, background-color, opacity;
+  transition-duration: 2000ms;
+  transition-timing-function: ease-out;
+  transition-delay: 0ms;
+}
+
+.opacity:hover {
+  transform: scale(2);
+  opacity: 2;
+  background-color: lightcoral;
+}
+
+.change__active {
+  transition-property: transform;
+  transition-duration: 1000ms;
+  transition-timing-function: ease;
+  transition-delay: 0ms;
+}
+
+.change__active:active {
+  transform: skew(50deg);
+}
+
+.transitions__cards__focus {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+  background-color: #ffcaca;
+  height: 200px;
+  width: 80%;
+  border-radius: 5px;
+  box-shadow: -5px 3px 7px 2px rgba(255, 202, 202, 0.6);
+  padding: 20px;
+  gap: 20px;
+}
+
+.input {
+  width: 90%;
+  height: 40px;
+  background-color: #ffcaca;
+  border-radius: 5px;
+  place-self: center;
+  cursor: pointer;
+}
+
+.focus__hover {
+  transition-property: transform font-size;
+  transition-duration: 1000ms;
+  transition-timing-function: ease;
+  transition-delay: 0ms;
+}
+
+.focus__hover:focus {
+  transform: translate(10px);
+  font-size: 18px;
+}
+
+.focus__backgound {
+  transition-property: background-color, transform;
+  transition-duration: 2000ms;
+  transition-timing-function: ease-in;
+  transition-delay: 0ms;
+}
+
+.focus__backgound:focus {
+  transform: scale(1.2);
+  background-color: lightgreen;
+}
+
+.focus__rotate {
+  transition-property: transform, box-shadow;
+  transition-duration: 1000ms;
+  transition-timing-function: ease-out;
+  transition-delay: 1000ms;
+}
+
+.focus__rotate:focus {
+  box-shadow: -6px 5px 5px -1px rgba(0, 0, 0, 0.41);
+  transform: rotate(360deg);
+}
